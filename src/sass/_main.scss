@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-size: 1.6rem;
+	font-family: "Kumbh Sans", sans-serif;
+}
+button {
+	border: none;
+	background-color: transparent;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 90%;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}

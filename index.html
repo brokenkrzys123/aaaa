@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shoop</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./dist/css/pages/home.min.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="wrapper">
+				<div class="box">
+					<button class="ham-btn">
+						<div class="ham-btn_box">
+							<span class="ham-btn_inner"></span>
+						</div>
+					</button>
+					<p class="firm_name">sneakers</p>
+				</div>
+				<div class="nav_items">
+					<button class="nav_item nav_showCart">
+						<img class="icon" src="./dist/assets/icons/icon-cart.svg" alt="" />
+					</button>
+					<button class="nav_item nav__profile">
+						<img
+							class="logo"
+							src="./dist/assets/images/image-avatar.webp"
+							alt=""
+						/>
+					</button>
+				</div>
+				<div class="menu-mobile">
+					<div class="menu-items">
+						<a href="#" class="menu-item">Collections</a>
+						<a href="#" class="menu-item">Men</a>
+						<a href="#" class="menu-item">Women</a>
+						<a href="#" class="menu-item">About</a>
+						<a href="#" class="menu-item">Contact</a>
+					</div>
+				</div>
+				<div class="menu_shadow"></div>
+			</div>
+		</nav>
+		<main class="main">
+			<section class="product">
+				<div class="product_gallery">
+					<div class="product_gallery-box">
+						<img
+							src="./dist/assets/images/image-product-1.webp"
+							alt=""
+							class="product_img"
+						/>
+						<img
+							src="./dist/assets/images/image-product-2.webp"
+							alt=""
+							class="product_img"
+						/>
+						<img
+							src="./dist/assets/images/image-product-3.webp"
+							alt=""
+							class="product_img"
+						/>
+						<img
+							src="./dist/assets/images/image-product-4.webp"
+							alt=""
+							class="product_img"
+						/>
+					</div>
+					<button class="btn btn-left">
+						<img
+							src="./dist/assets/icons/icon-previous.svg"
+							alt=""
+							class="icon"
+						/>
+					</button>
+					<button class="btn btn-right">
+						<img src="./dist/assets/icons/icon-next.svg" alt="" class="icon" />
+					</button>
+				</div>
+				<div class="product_info">
+					<p class="firm-name">sneakers comapny</p>
+					<h2 class="product_name">Fall Limited Edition Sneakers</h2>
+					<p class="product_info-text">
+						These low-profile sneakers are your perfect casual wear
+						companion.Featuring a durable rubber outer sole , they'll withstand
+						everything the weather can offer.
+					</p>
+					<div class="product_price-box">
+						<div class="box">
+							<p class="product_current-price">$125.00</p>
+							<span class="discount">50%</span>
+						</div>
+						<p class="product_old-price">$250.00</p>
+					</div>
+					<div class="product_btns-box">
+						<div class="count-btn">
+							<button type="button" id="sub" class="sub">
+								<img
+									class="icon"
+									src="./dist/assets/icons/icon-minus.svg"
+									alt=""
+								/>
+							</button>
+							<input
+								type="number"
+								min="0"
+								max="100"
+								id="count"
+								value="0"
+								class="count"
+								placeholder="0"
+								disabled="true"
+							/>
+							<button type="button" id="add" class="add">
+								<img
+									src="./dist/assets/icons/icon-plus.svg"
+									alt=""
+									class="icon"
+								/>
+							</button>
+						</div>
+						<button class="product_btn-add">
+							<img
+								src="./dist/assets/icons/icon-cart-white.svg"
+								alt=""
+								class="icon"
+							/>
+							<span class="btn-text"> Add to cart</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="selected-products">
+				<div class="box">
+					<h3 class="title-section">Cart</h3>
+					<button class="close">
+						<img src="./dist/assets/icons/icon-close.svg" alt="" class="icon" />
+					</button>
+				</div>
+				<div class="selected-products_box">
+					<p class="selected-products_text">Your cart is empty.</p>
+				</div>
+			</section>
+		</main>
+		<script src="./dist/js/main.min.js"></script>
+		<script src="./dist/js/home.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,132 @@
+@import "../utils/variables.scss";
+@import "../utils/mixins.scss";
+.nav {
+	position: fixed;
+	padding: 1.5rem 0;
+	width: 100vw;
+	background-color: $clr-second_white;
+	z-index: 5;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	//ham-btn
+	.ham-btn {
+		z-index: 10;
+		padding: 0.5rem;
+		margin-left: -0.5rem;
+
+		&_box {
+			position: relative;
+			padding: 1rem;
+			width: 2.8rem;
+			cursor: pointer;
+		}
+		&_inner {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 3px;
+			background-color: $clr-second_black;
+			transition: background-color 0.1s 0.2s ease-in-out;
+			&::after,
+			&::before {
+				@include after-before;
+				background-color: $clr-second_black;
+				height: 2.5px;
+				transition: transform 0.2s 0.2s ease-in-out;
+			}
+			&::after {
+				top: -0.7rem;
+			}
+			&::before {
+				top: 0.7rem;
+			}
+		}
+	}
+	//ham-btn active
+
+	.ham-btn.active {
+		.ham-btn_inner {
+			background-color: transparent;
+			&::after {
+				transform: translateY(0.7rem) rotate(45deg);
+			}
+			&::before {
+				transform: translateY(-0.7rem) rotate(-45deg);
+			}
+		}
+	}
+
+	.box {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		.firm_name {
+			color: $clr-second_black;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 2rem;
+		}
+	}
+	&_items {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	&_item {
+		.icon {
+			width: 2.8rem;
+			pointer-events: none;
+		}
+		.logo {
+			width: 3.6rem;
+		}
+	}
+
+	//mobile-menu
+	.menu-mobile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 60vw;
+		background-color: $clr-second_white;
+		transform: translateX(-100%);
+		transition: transform 0.3s;
+		z-index: 2;
+
+		.menu-items {
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
+			margin-top: 15vh;
+			padding-left: 5vw;
+			.menu-item {
+				font-size: $fz_menu-item;
+				color: $clr-second_black;
+				font-weight: bold;
+			}
+		}
+	}
+	.menu_shadow {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: $clr-second_black-op;
+		z-index: 1;
+		transform: translateX(-100%);
+		transition: transform 0.3s;
+	}
+	.menu-mobile.active {
+		transform: translateX(0);
+	}
+	.menu_shadow.active {
+		transform: translateX(0);
+	}
+}
